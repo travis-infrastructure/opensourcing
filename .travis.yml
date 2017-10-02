@@ -1,0 +1,12 @@
+sudo: false
+dist: trusty
+language: minimal
+install: true
+script:
+    - echo public
+    - git checkout master
+    - "echo $TRAVIS_BUILD_ID >>builds"
+    - git add builds
+    - git commit -m "[skip ci] $TRAVIS_BUILD_ID"
+    - git push origin master
+
