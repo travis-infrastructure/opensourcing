@@ -9,4 +9,4 @@ script:
     - git add builds
     - git commit -m "[skip ci] $TRAVIS_BUILD_ID"
     - git push origin master
-
+    - echo public
